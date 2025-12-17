@@ -32,51 +32,123 @@ function typeEffect() {
 
 typeEffect();
 
+
+
+// SKILLS 
 const skillData = {
   javascript: {
     title: "JavaScript",
     level: "Intermediate",
-    tools: "ES6, DOM, Fetch API, Async/Await",
-    projects: "FindNest, PizzaDelight"
+    usage: "Core application logic, async workflows, API handling",
+    tools: "ES6+, DOM, Fetch API, Async/Await",
+    projects: "All Projects",
+    image: "assets/skills/js.png"
   },
+
   react: {
     title: "React",
     level: "Intermediate",
-    tools: "Hooks, Components, State Management",
-    projects: "FindNest"
+    usage: "Building reusable UI components and dynamic pages",
+    tools: "Hooks, Functional Components, State Management",
+    projects: "PizzaDelight",
+    image: "assets/skills/react.png"
   },
+
   node: {
     title: "Node.js",
     level: "Intermediate",
-    tools: "Express, REST APIs, JWT",
-    projects: "PizzaDelight"
+    usage: "Backend services, APIs, authentication logic",
+    tools: "Express.js, REST APIs, JWT",
+    projects: "FindNest, PizzaDelight",
+    image: "assets/skills/node.png"
   },
+
+  express: {
+    title: "Express.js",
+    level: "Intermediate",
+    usage: "Routing, middleware, REST API architecture",
+    tools: "Express, MVC structure",
+    projects: "FindNest, PizzaDelight",
+    image: "assets/skills/express.png"
+  },
+
   mongodb: {
     title: "MongoDB",
     level: "Basic",
+    usage: "Database design and CRUD operations",
     tools: "Mongoose, Aggregation",
-    projects: "FindNest"
+    projects: "FindNest, PizzaDelight",
+    image: "assets/skills/mongodb.png"
+  },
+
+  htmlcss: {
+    title: "HTML & CSS",
+    level: "Experienced",
+    usage: "Responsive layouts and UI structuring",
+    tools: "Flexbox, Grid, Modern CSS",
+    projects: "All projects",
+    image: "assets/skills/htmlcss.png"
+  },
+
+  git: {
+    title: "Git & GitHub",
+    level: "Intermediate",
+    usage: "Version control and collaborative development",
+    tools: "Git, GitHub, Branching",
+    projects: "All projects",
+    image: "assets/skills/git.png"
+  },
+
+  restapi: {
+    title: "REST APIs",
+    level: "Intermediate",
+    usage: "Client-server communication and data exchange",
+    tools: "HTTP, JSON, CRUD",
+    projects: "FindNest, PizzaDelight",
+    image: "assets/skills/api.png"
   }
 };
 
+
+
 const skillButtons = document.querySelectorAll(".skill-item");
+
 const titleEl = document.getElementById("skill-title");
 const levelEl = document.getElementById("skill-level");
 const toolsEl = document.getElementById("skill-tools");
 const projectsEl = document.getElementById("skill-projects");
+const usageEl = document.getElementById("skill-usage");
+const imageEl = document.getElementById("skill-image");
 
 skillButtons.forEach(btn => {
   btn.addEventListener("click", () => {
+    // remove active state
     skillButtons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
+    // get skill data
     const skill = skillData[btn.dataset.skill];
+
+    // update content
     titleEl.textContent = skill.title;
     levelEl.textContent = `Level: ${skill.level}`;
-    toolsEl.textContent = skill.tools;
-    projectsEl.textContent = skill.projects;
+    usageEl.textContent = `Usage: ${skill.usage}`;
+    toolsEl.textContent = `Tools: ${skill.tools}`;
+    projectsEl.textContent = `Used In: ${skill.projects}`;
+
+    // update image (with smooth swap)
+    imageEl.style.opacity = 0;
+
+    setTimeout(() => {
+      imageEl.src = skill.image;
+      imageEl.alt = `${skill.title} icon`;
+      imageEl.style.opacity = 1;
+    }, 150);
   });
 });
+
+
+
 
 // THEME SWITCHER
 const themeButtons = document.querySelectorAll(".theme-btn");

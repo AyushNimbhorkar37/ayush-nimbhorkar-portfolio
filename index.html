@@ -26,6 +26,13 @@
 </head>
 
 <body>
+    <header class="topbar">
+    <span class="logo">Ayush</span>
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
     <!-- HERO -->
     <section class="hero">
@@ -75,23 +82,27 @@
         <div class="skills-layout">
             <!-- LEFT: Skill List -->
             <div class="skills-list">
-                <button class="skill-item active" data-skill="javascript">JavaScript</button>
+                <button class="skill-item" data-skill="htmlcss">HTML & CSS</button>
+                <button class="skill-item" data-skill="javascript">JavaScript</button>
                 <button class="skill-item" data-skill="react">React</button>
                 <button class="skill-item" data-skill="node">Node.js</button>
                 <button class="skill-item" data-skill="mongodb">MongoDB</button>
+                <button class="skill-item" data-skill="git">Git & GitHub</button>
+                <button class="skill-item" data-skill="restapi">Rest APIs</button>
             </div>
 
             <!-- RIGHT: Skill Details -->
             <div class="skill-details">
                 <div class="skill-detail-layout">
-                    <img id="skill-image" src="assets/images/js.png" alt="Skill visual" />
+                    <img id="skill-image" src="assets/skills/user.png" alt="Skill visual" />
 
                     <div class="skill-text">
-                        <h3 id="skill-title">JavaScript</h3>
-                        <p id="skill-level">Level: Intermediate</p>
+                        <h3 id="skill-title">See skill details here</h3>
+                        <p id="skill-level">Click on a Skill</p>
 
-                        <p><strong>Tools:</strong> <span id="skill-tools"></span></p>
-                        <p><strong>Used In:</strong> <span id="skill-projects"></span></p>
+                        <p><strong></strong> <span id="skill-usage"></span></p>
+                        <p><strong></strong> <span id="skill-tools"></span></p>
+                        <p><strong></strong> <span id="skill-projects"></span></p>
                     </div>
                 </div>
             </div>
@@ -99,36 +110,92 @@
         </div>
     </section>
 
-    <!-- DEVELOPER CREDIBILITY -->
-    <section class="dev-stats">
-        <h2 class="section-title">Developer Credibility</h2>
-        <p class="section-subtitle">
-            Proof of consistency, not just claims.
+    <section class="projects-section" id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="section-subtitle">
+    Real-world applications I’ve designed, built, and shipped.
+  </p>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+      <img src="assets/projects/findnest.png" alt="FindNest project" />
+
+      <div class="project-content">
+        <h3>FindNest</h3>
+        <p class="project-desc">
+          A Full-Stack Web Application for exploring and booking travel accommodation with authentication,
+          listings, and booking workflows.
         </p>
 
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>120+</h3>
-                <p>GitHub Commits</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>10+</h3>
-                <p>Repositories</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>2+</h3>
-                <p>Production Projects</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Daily</h3>
-                <p>Learning Habit</p>
-            </div>
+        <div class="project-tech">
+          <span>Express</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>REST APIs</span>
         </div>
-    </section>
 
+        <div class="project-actions">
+          <a href="#" class="btn primary">Live Demo</a>
+          <a href="#" class="btn ghost">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+      <img src="assets/projects/pizzadelight.png" alt="PizzaDelight project" />
+
+      <div class="project-content">
+        <h3>PizzaDelight</h3>
+        <p class="project-desc">
+          A user-friendly platform enabling online pizza customization, ordering and real-time inventory management for admins. 
+        </p>
+
+        <div class="project-tech">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="#" class="btn primary">Live Demo</a>
+          <a href="#" class="btn ghost">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+      <img src="assets/projects/portfolio.png" alt="Portfolio project" />
+
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p class="project-desc">
+          A next-gen interactive portfolio showcasing skills, projects,
+          and professional workflow.
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="#" class="btn primary">Live Demo</a>
+          <a href="#" class="btn ghost">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CORE SKILLS  -->
     <section class="core-skills">
   <h2 class="section-title">Core Strengths</h2>
   <p class="section-subtitle">
@@ -137,50 +204,56 @@
 
   <div class="core-grid">
 
-    <div class="core-box">
-      <h3>Team Collaboration</h3>
-      <p>
-        I work closely with designers, developers, and stakeholders to ship features faster and cleaner.
-      </p>
-    </div>
-
-    <div class="core-box">
-      <h3>Problem Solving</h3>
-      <p>
-        I break complex problems into logical steps and focus on practical, scalable solutions.
-      </p>
-    </div>
-
-    <div class="core-box">
-      <h3>Adaptability</h3>
-      <p>
-        I quickly learn new tools, frameworks, and workflows based on project needs.
-      </p>
-    </div>
-
-    <div class="core-box">
-      <h3>Ownership Mindset</h3>
-      <p>
-        I take responsibility for features end-to-end, from planning to deployment.
-      </p>
-    </div>
-
-    <div class="core-box">
-      <h3>Clean Engineering</h3>
-      <p>
-        I write readable, maintainable code that other developers can easily work with.
-      </p>
-    </div>
-
-    <div class="core-box">
-      <h3>Continuous Improvement</h3>
-      <p>
-        I actively refine my skills, code quality, and workflow with every project.
-      </p>
-    </div>
-
+  <div class="core-box">
+    <h3>Team Collaboration</h3>
+    <p>
+      Comfortable working in collaborative environments, aligning with designers,
+      backend developers, and stakeholders to deliver features smoothly.
+    </p>
   </div>
-</section>
+
+  <div class="core-box">
+    <h3>Problem Solving & Debugging</h3>
+    <p>
+      Strong ability to analyze bugs, performance issues, and edge cases, and resolve
+      them with clean and logical fixes.
+    </p>
+  </div>
+
+  <div class="core-box">
+    <h3>System Thinking</h3>
+    <p>
+      I think beyond individual components and focus on how frontend, backend,
+      APIs, and databases work together as a system.
+    </p>
+  </div>
+
+  <div class="core-box">
+    <h3>Adaptability & Learning</h3>
+    <p>
+      Quick to pick up new frameworks, tools, or workflows when project requirements
+      change or scale.
+    </p>
+  </div>
+
+  <div class="core-box">
+    <h3>Ownership & Responsibility</h3>
+    <p>
+      I take full ownership of features — from understanding requirements and
+      implementation to testing and deployment.
+    </p>
+  </div>
+
+  <div class="core-box">
+    <h3>Clean & Maintainable Code</h3>
+    <p>
+      I prioritize readable, structured, and maintainable code that scales well
+      and is easy for other developers to understand.
+    </p>
+  </div>
+
+</div>
+
 
 
     <!-- CONTACT -->
@@ -226,12 +299,4 @@
 
     <script src="script.js"></script>
 </body>
-<header class="topbar">
-    <span class="logo">Ayush</span>
-    <nav>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
 </html>

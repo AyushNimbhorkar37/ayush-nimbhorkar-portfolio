@@ -11,7 +11,7 @@
 
 /* ACCENTS */
 [data-accent="cyan"] { --accent: #38bdf8; }
-[data-accent="orange"] { --accent: #f97316; }
+[data-accent="orange"] { --accent: #ff8730; }
 [data-accent="purple"] { --accent: #a78bfa; }
 
 
@@ -20,6 +20,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+}
+
+a{
+    text-decoration: none;
 }
 
 body {
@@ -138,33 +142,17 @@ body {
 
 
 
-/* SKILL INTELLIGENCE */
-
-.skill-detail-layout {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  border-color: var(--accent);
-}
-
-#skill-image {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 12px;
-}
-
-.skill-text p {
-  margin-top: 8px;
-}
+/* =========================
+   SKILL INTELLIGENCE
+   ========================= */
 
 .skills-section {
   padding: 120px 80px;
+  max-width: 1200px;
+  /* margin: 0 auto; */
 }
 
+/* TITLE */
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -175,59 +163,123 @@ body {
   margin-bottom: 50px;
 }
 
+/* MAIN LAYOUT */
 .skills-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 60px;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
+/* =========================
+   LEFT: SKILL LIST
+   ========================= */
+
 .skills-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
+/* BUTTONS */
 .skill-item {
   background: #020617;
   border: 1px solid #1e293b;
   color: var(--text);
   padding: 14px 18px;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   text-align: left;
+  font-size: 0.95rem;
+  min-height: 52px;
   transition: all 0.2s ease;
 }
 
 .skill-item:hover {
   border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .skill-item.active {
-    background: linear-gradient(90deg, #38bdf8, #f97316);
-    color: #020617;
+  background: linear-gradient(90deg, #38bdf8, #f97316);
+  color: #020617;
+  border-color: transparent;
 }
 
+/* =========================
+   RIGHT: SKILL DETAILS CARD
+   ========================= */
+
 .skill-details {
-    background: linear-gradient(
+  background: linear-gradient(
     180deg,
     rgba(255,255,255,0.04),
     rgba(255,255,255,0.01)
   );
   border: 1px solid;
   border-color: var(--accent);
-    border-radius: 14px;
-    padding: 40px;
+  border-radius: 18px;
+  padding: 36px 40px;
 }
 
-.skill-details h3 {
+#skill-title{
+    color: var(--accent);
+}
+
+/* CONTENT LAYOUT */
+.skill-detail-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* ICON */
+#skill-image {
+  width: 96px;
+  height: 96px;
+  padding: 2px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: linear-gradient(
+    135deg,
+    rgba(56,189,248,0.15),
+    rgba(249,115,22,0.15)
+  );
+  border: 1px solid rgba(255,255,255,0.18);
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* TEXT */
+.skill-text h3 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.skill-meta {
-  margin-top: 20px;
-  line-height: 1.8;
+.skill-text p {
+  margin-top: 6px;
+  line-height: 1.6;
 }
+
+.skill-text strong {
+  color: var(--accent);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 /* DEV STATS */
 .dev-stats {
@@ -237,7 +289,7 @@ body {
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 60px;
   margin-top: 50px;
 }
 
@@ -247,17 +299,17 @@ body {
     rgba(255,255,255,0.04),
     rgba(255,255,255,0.01)
   );
-  border: 1px solid;
-  border-color: var(--accent);
-  border-radius: 14px;
+    border-radius: 14px;
   padding: 40px;
   text-align: center;
   transition: transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 0 7px 4px var(--accent);
 }
 
 .stat-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 0 12px 5px var(--accent);
 }
 
 .stat-card h3 {
@@ -269,6 +321,90 @@ body {
 .stat-card p {
   color: var(--muted);
 }
+
+
+/* =========================
+   PROJECTS SECTION
+   ========================= */
+
+.projects-section {
+  padding: 120px 80px;
+  width: 100%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  margin-top: 50px;
+}
+
+/* CARD */
+.project-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.01)
+  );
+  box-shadow: 0 0 7px 4px var(--accent);
+
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 12px 5px var(--accent);
+
+}
+
+/* IMAGE */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.project-content {
+  padding: 28px;
+}
+
+.project-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* TECH STACK */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.project-tech span {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ACTIONS */
+.project-actions {
+  display: flex;
+  gap: 12px;
+}
+
 
 
 /* =========================
@@ -299,11 +435,15 @@ body {
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 7px 4px var(--accent);
+
 }
 
 .core-box:hover {
     transform: translateY(-8px);
     border-color: var(--accent);
+    box-shadow: 0 0 12px 5px var(--accent);
+
 }
 
 .core-box h3 {
@@ -387,6 +527,7 @@ button:focus-visible {
 
 /* CONTACT */
 .contact-section {
+  margin-top: 100px;
   padding: 120px 80px;
 }
 
@@ -455,6 +596,7 @@ button:focus-visible {
 
 /* TOP BAR */
 .topbar {
+    /* margin-right: 20px; */
   position: fixed;
   top: 0;
   width: 100%;
