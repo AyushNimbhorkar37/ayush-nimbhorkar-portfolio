@@ -160,3 +160,23 @@ form.addEventListener("submit", e => {
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
+
+
+const heroVisual = document.querySelector(".hero-visual");
+const profilePic = document.querySelector(".profile-pic");
+
+heroVisual.addEventListener("mousemove", (e) => {
+  const rect = heroVisual.getBoundingClientRect();
+  const x = e.clientX - rect.left - rect.width / 2;
+  const y = e.clientY - rect.top - rect.height / 2;
+
+  profilePic.style.transform = `
+    rotateX(${(-y / 30)}deg)
+    rotateY(${(x / 30)}deg)
+    scale(1.03)
+  `;
+});
+
+heroVisual.addEventListener("mouseleave", () => {
+  profilePic.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+});
