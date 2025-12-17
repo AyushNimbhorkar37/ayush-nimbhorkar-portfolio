@@ -2,140 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ayush Nimbhorkar | Portfolio</title>
+  <title>Ayush Nimbhorkar | Full Stack Developer</title>
+
+  <meta name="description" content="Ayush Nimbhorkar is a Full Stack Developer building modern, scalable web applications using React, Node.js, and MongoDB." />
+  <meta name="keywords" content="Ayush Nimbhorkar, Full Stack Developer, React Developer, Web Developer Portfolio" />
+  <meta name="author" content="Ayush Nimbhorkar" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Open Graph (LinkedIn / WhatsApp) -->
+  <meta property="og:title" content="Ayush Nimbhorkar | Full Stack Developer" />
+  <meta property="og:description" content="Modern, interactive developer portfolio showcasing real projects and skills." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/preview.png" />
+
   <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="logo">Ayush</div>
-  <nav>
-    <a class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<body>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <p class="hero-intro">Hello, I'm</p>
-
-    <h1 class="hero-name">
-      Ayush <span>Nimbhorkar</span>
+  <div class="hero-content">
+    <h1>
+      Hi, I’m <span class="gradient-text">Ayush</span>
     </h1>
 
-    <h2 class="hero-role">
-      I'm a <span>Full Stack Developer</span>
-    </h2>
+    <h2 class="typewriter"></h2>
 
     <p class="hero-desc">
-      Crafting digital experiences with passion.
+      I build modern, scalable web applications and love turning ideas into products.
     </p>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">View My Work</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
+    <div class="hero-actions">
+      <button class="btn primary">View Projects</button>
+      <button class="btn ghost">Contact Me</button>
     </div>
   </div>
 
-  <div class="hero-right">
-    <img src="assets/profile.jpg" alt="Profile Image" />
+  <div class="hero-visual">
+    <div class="glow"></div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="about-text">
-    <h2>About Me</h2>
-    <p class="subtitle">Let me introduce myself.</p>
 
-    <p>
-      I'm a Full Stack Developer with a love for creating beautiful and
-      functional websites and applications.
-    </p>
+<!-- THEME CONTROLS -->
+<div class="theme-controls">
+  <button data-theme="dark" class="theme-btn">Dark</button>
+  <button data-theme="light" class="theme-btn">Light</button>
 
-    <a class="btn primary">Read More</a>
+  <div class="accent-group">
+    <span data-accent="cyan" class="accent-dot cyan"></span>
+    <span data-accent="orange" class="accent-dot orange"></span>
+    <span data-accent="purple" class="accent-dot purple"></span>
   </div>
-
-  <div class="about-stats">
-    <div>
-      <h3>1+</h3>
-      <p>Years Experience</p>
-    </div>
-    <div>
-      <h3>10+</h3>
-      <p>Projects Completed</p>
-    </div>
-    <div>
-      <h3>5+</h3>
-      <p>Happy Clients</p>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- SKILLS -->
-<section id="skills" class="skills">
-  <h2>My Skills</h2>
-  <p class="subtitle">What I Do</p>
+<section class="skills-section" id="skills">
+  <h2 class="section-title">Skill Intelligence</h2>
+  <p class="section-subtitle">
+    Click a skill to see how I actually use it.
+  </p>
 
-  <div class="skills-grid">
-    <div class="skill-card">Web Development</div>
-    <div class="skill-card">UI / UX Design</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">React & Node.js</div>
+  <div class="skills-layout">
+    <!-- LEFT: Skill List -->
+    <div class="skills-list">
+      <button class="skill-item active" data-skill="javascript">JavaScript</button>
+      <button class="skill-item" data-skill="react">React</button>
+      <button class="skill-item" data-skill="node">Node.js</button>
+      <button class="skill-item" data-skill="mongodb">MongoDB</button>
+    </div>
+
+    <!-- RIGHT: Skill Details -->
+    <div class="skill-details">
+      <h3 id="skill-title">JavaScript</h3>
+      <p id="skill-level">Level: Intermediate</p>
+
+      <div class="skill-meta">
+        <p><strong>Tools:</strong> <span id="skill-tools">ES6, DOM, Fetch API</span></p>
+        <p><strong>Used In:</strong> <span id="skill-projects">FindNest, PizzaDelight</span></p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-  <h2>Latest Projects</h2>
-  <p class="subtitle">Some of my recent work</p>
+<!-- DEVELOPER CREDIBILITY -->
+<section class="dev-stats">
+  <h2 class="section-title">Developer Credibility</h2>
+  <p class="section-subtitle">
+    Proof of consistency, not just claims.
+  </p>
 
-  <div class="projects-grid">
-    <div class="project-card">
-      <img src="assets/project1.jpg" />
-      <p>E-Commerce Website</p>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>120+</h3>
+      <p>GitHub Commits</p>
     </div>
 
-    <div class="project-card">
-      <img src="assets/project2.jpg" />
-      <p>Mobile App Design</p>
+    <div class="stat-card">
+      <h3>15+</h3>
+      <p>Repositories</p>
     </div>
 
-    <div class="project-card">
-      <img src="assets/project3.jpg" />
-      <p>Portfolio Website</p>
+    <div class="stat-card">
+      <h3>2+</h3>
+      <p>Production Projects</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Daily</h3>
+      <p>Learning Habit</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="workflow">
+  <h2 class="section-title">How I Work</h2>
+  <p class="section-subtitle">
+    My approach to building reliable and scalable products.
+  </p>
+
+  <div class="workflow-steps">
+    <div class="workflow-step">
+      <span>01</span>
+      <h3>Understand the Problem</h3>
+      <p>
+        I clarify requirements, edge cases, and expected outcomes before writing code.
+      </p>
+    </div>
+
+    <div class="workflow-step">
+      <span>02</span>
+      <h3>Design the Solution</h3>
+      <p>
+        I plan architecture, data flow, and UI structure to avoid rework later.
+      </p>
+    </div>
+
+    <div class="workflow-step">
+      <span>03</span>
+      <h3>Build Incrementally</h3>
+      <p>
+        I write clean, modular code with version control and meaningful commits.
+      </p>
+    </div>
+
+    <div class="workflow-step">
+      <span>04</span>
+      <h3>Test & Improve</h3>
+      <p>
+        I test edge cases, refactor for clarity, and optimize performance.
+      </p>
+    </div>
+
+    <div class="workflow-step">
+      <span>05</span>
+      <h3>Deploy & Iterate</h3>
+      <p>
+        I deploy confidently and iterate based on feedback and real usage.
+      </p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Let's Connect</h2>
-  <p>Get in touch with me</p>
-
-  <p class="contact-desc">
-    Feel free to reach out for collaborations or just to say hi!
+<section class="contact-section" id="contact">
+  <h2 class="section-title">Let’s Work Together</h2>
+  <p class="section-subtitle">
+    Have a project or opportunity in mind? Send a message.
   </p>
 
-  <a class="btn primary">Email Me</a>
+  <div class="contact-grid">
+    <!-- LEFT: INFO -->
+    <div class="contact-info">
+      <p>
+        Prefer email?
+      </p>
+
+      <div class="email-copy">
+        <span id="email-text">ayush.nimbhorkar@email.com</span>
+        <button id="copy-email" class="btn ghost">Copy</button>
+      </div>
+
+      <p class="contact-note">
+        I usually respond within 24 hours.
+      </p>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <form class="contact-form" id="contactForm" novalidate>
+      <input type="text" id="name" placeholder="Your name" required />
+      <input type="email" id="email" placeholder="Your email" required />
+      <textarea id="message" placeholder="Your message" required></textarea>
+
+      <button type="submit" class="btn primary">
+        Send Message
+      </button>
+
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Ayush Nimbhorkar. All Rights Reserved.</p>
-</footer>
 
+
+<script src="script.js"></script>
 </body>
+<header class="topbar">
+  <span class="logo">Ayush</span>
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 </html>
