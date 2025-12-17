@@ -8,15 +8,6 @@
   --accent: #38bdf8; /* default cyan */
 }
 
-/* LIGHT THEME */
-[data-theme="light"] {
-  --bg: #f8fafc;
-  --panel: #ffffff;
-  --text: #020617;
-  --muted: #475569;
-
-  
-}
 
 /* ACCENTS */
 [data-accent="cyan"] { --accent: #38bdf8; }
@@ -146,12 +137,14 @@ body {
 }
 
 
+
 /* SKILL INTELLIGENCE */
 
 .skill-detail-layout {
   display: flex;
   gap: 30px;
   align-items: center;
+  border-color: var(--accent);
 }
 
 #skill-image {
@@ -167,8 +160,6 @@ body {
 .skill-text p {
   margin-top: 8px;
 }
-
-
 
 .skills-section {
   padding: 120px 80px;
@@ -212,15 +203,20 @@ body {
 }
 
 .skill-item.active {
-  background: linear-gradient(90deg, #38bdf8, #f97316);
-  color: #020617;
+    background: linear-gradient(90deg, #38bdf8, #f97316);
+    color: #020617;
 }
 
 .skill-details {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 14px;
-  padding: 40px;
+    background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.01)
+  );
+  border: 1px solid;
+  border-color: var(--accent);
+    border-radius: 14px;
+    padding: 40px;
 }
 
 .skill-details h3 {
@@ -246,8 +242,13 @@ body {
 }
 
 .stat-card {
-  background: #020617;
-  border: 1px solid #1e293b;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.01)
+  );
+  border: 1px solid;
+  border-color: var(--accent);
   border-radius: 14px;
   padding: 40px;
   text-align: center;
@@ -261,7 +262,7 @@ body {
 
 .stat-card h3 {
   font-size: 2.5rem;
-  color: #f97316;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
@@ -269,43 +270,54 @@ body {
   color: var(--muted);
 }
 
-/* HOW I WORK */
-.workflow {
+
+/* =========================
+   CORE STRENGTHS
+   ========================= */
+
+.core-skills {
   padding: 120px 80px;
 }
 
-.workflow-steps {
+.core-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
+  gap: 32px;
   margin-top: 60px;
 }
 
-.workflow-step {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 14px;
-  padding: 30px;
+.core-box {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.01)
+  );
+  border: 1px solid;
+  border-color: var(--accent);
+  border-radius: 18px;
+  padding: 34px;
+  transition: all 0.25s ease;
   position: relative;
+  overflow: hidden;
 }
 
-.workflow-step span {
-  position: absolute;
-  top: -18px;
-  right: 20px;
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgba(56, 189, 248, 0.15);
+.core-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
 }
 
-.workflow-step h3 {
+.core-box h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
   margin-bottom: 10px;
 }
 
-.workflow-step p {
-  color: var(--muted);
+.core-box p {
+  font-size: 0.95rem;
   line-height: 1.6;
+  color: var(--muted-dark);
 }
+
 
 
 /* THEME CONTROLS UI */
@@ -321,6 +333,10 @@ body {
   align-items: center;
   gap: 10px;
   z-index: 200;
+}
+
+.theme-controls p {
+    color: var(--accent);
 }
 
 .theme-btn {
@@ -453,13 +469,14 @@ button:focus-visible {
 }
 
 .topbar a {
-  color: var(--muted);
+  color: var(--accent);
   margin-left: 20px;
   text-decoration: none;
 }
 
 .topbar a:hover {
   color: var(--accent);
+  
 }
 
 html {
