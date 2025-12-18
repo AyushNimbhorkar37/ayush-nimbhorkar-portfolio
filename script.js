@@ -1,7 +1,7 @@
 const roles = [
   "Full Stack Developer",
-  "Problem Solver",
-  "Product-Focused Engineer"
+  "MERN Stack Developer",
+  "Software Engineer"
 ];
 
 const el = document.querySelector(".typewriter");
