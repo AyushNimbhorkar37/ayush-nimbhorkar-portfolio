@@ -81,11 +81,20 @@ const skillData = {
     image: "assets/skills/mongodb.png"
   },
 
+  mysql: {
+    title: "MySQL",
+    level: "Basic",
+    usage: "Relational database design and query-based data handling",
+    tools: "SQL Queries, Joins, Indexes etc",
+    projects: "Academic & local practice projects",
+    image: "assets/skills/mysql.png"
+  },
+
   htmlcss: {
     title: "HTML & CSS",
     level: "Experienced",
     usage: "Responsive layouts and UI structuring",
-    tools: "Flexbox, Grid, Modern CSS",
+    tools: "Flexbox, Grid, Modern CSS etc",
     projects: "All projects",
     image: "assets/skills/htmlcss.png"
   },
@@ -106,6 +115,24 @@ const skillData = {
     tools: "HTTP, JSON, CRUD",
     projects: "FindNest, PizzaDelight",
     image: "assets/skills/api.png"
+  },
+
+  c: {
+    title: "C",
+    level: "Intermediate",
+    usage: "Understanding low-level logic and problem-solving fundamentals",
+    tools: "Pointers, Memory Management, Control Structures etc",
+    projects: "DSA practice & academic programs",
+    image: "assets/skills/c.png"
+  },
+
+  cpp: {
+    title: "C++",
+    level: "Intermediate",
+    usage: "Data Structures, Algorithms, and competitive problem solving",
+    tools: "STL, OOP, Algorithms etc",
+    projects: "DSA practice & problem-solving challenges",
+    image: "assets/skills/cpp.png"
   }
 };
 
@@ -150,34 +177,26 @@ skillButtons.forEach(btn => {
 
 
 
-// THEME SWITCHER
-const themeButtons = document.querySelectorAll(".theme-btn");
+// THEME / ACCENT SWITCHER
 const accentDots = document.querySelectorAll(".accent-dot");
 const root = document.documentElement;
 
-// Restore saved prefs
-const savedTheme = localStorage.getItem("theme");
+// Restore saved accent
 const savedAccent = localStorage.getItem("accent");
-if (savedTheme) root.setAttribute("data-theme", savedTheme);
-if (savedAccent) root.setAttribute("data-accent", savedAccent);
+if (savedAccent) {
+  root.setAttribute("data-accent", savedAccent);
+}
 
-themeButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const theme = btn.dataset.theme;
-    root.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  });
-});
-
+// Accent color switching
 accentDots.forEach(dot => {
   dot.addEventListener("click", () => {
-    const accent =
-      dot.classList.contains("cyan") ? "cyan" :
-      dot.classList.contains("orange") ? "orange" : "purple";
+    const accent = dot.dataset.accent;
     root.setAttribute("data-accent", accent);
     localStorage.setItem("accent", accent);
   });
 });
+
+
 
 const reveals = document.querySelectorAll(".reveal");
 const onScroll = () => {
