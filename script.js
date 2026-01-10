@@ -42,7 +42,7 @@ const skillData = {
     usage: "Core application logic, async workflows, API handling",
     tools: "ES6+, DOM, Fetch API, Async/Await",
     projects: "All Projects",
-    image: "assets/skills/js.png"
+    image: "assets/skills/js.png",
   },
 
   react: {
