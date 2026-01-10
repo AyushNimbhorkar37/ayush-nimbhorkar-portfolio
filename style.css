@@ -738,3 +738,136 @@ img {
         text-align: center;
     }
 }
+
+
+/* =========================
+   MOBILE RESPONSIVENESS FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  /* GLOBAL */
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 80px 20px !important;
+  }
+
+  /* ================= HERO ================= */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 100px 20px 60px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .hero-visual {
+    margin-top: 40px;
+    height: auto;
+  }
+
+  .profile-pic {
+    width: 260px;
+    height: 260px;
+    padding: 14px;
+  }
+
+  .hero-visual::before {
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
+  }
+
+  /* ================= SKILLS ================= */
+  .skills-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .skill-item {
+    font-size: 0.85rem;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .skill-details {
+    padding: 24px;
+  }
+
+  .skill-detail-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #skill-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-details h3 {
+    font-size: 1.5rem;
+  }
+
+  /* ================= CORE SKILLS ================= */
+  .core-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .core-box {
+    padding: 24px;
+  }
+
+  /* ================= EDUCATION ================= */
+  .education-card {
+    padding: 24px;
+  }
+
+  /* ================= CONTACT ================= */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  /* ================= FOOTER ================= */
+  footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
