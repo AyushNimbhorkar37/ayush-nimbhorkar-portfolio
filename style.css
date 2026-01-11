@@ -740,7 +740,7 @@ img {
 }
 
 
-/* ========= MOBILE RESPONSIVENESS =========== */
+/* =========== RESPONSIVENESS (for mobile) ============= */
 @media (max-width: 768px) {
 
   /* GLOBAL */
@@ -749,18 +749,32 @@ img {
   }
 
   section {
-    padding: 80px 20px !important;
+    padding: 90px 22px !important;
   }
 
-  /* ================= HERO ================= */
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 100px 20px 60px;
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
     text-align: center;
   }
 
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 120px 22px 80px;
+    text-align: center;
+    row-gap: 40px;
+  }
+
   .hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
+    margin-bottom: 8px;
   }
 
   .hero-content h2 {
@@ -768,14 +782,16 @@ img {
   }
 
   .hero-desc {
-    max-width: 100%;
     font-size: 0.95rem;
+    margin-top: 18px;
+    max-width: 100%;
   }
 
   .hero-actions {
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     align-items: center;
   }
 
@@ -785,8 +801,7 @@ img {
   }
 
   .hero-visual {
-    margin-top: 40px;
-    height: auto;
+    margin-top: 20px;
   }
 
   .profile-pic {
@@ -796,35 +811,36 @@ img {
   }
 
   .hero-visual::before {
-    width: 300px;
-    height: 300px;
-    filter: blur(50px);
+    width: 320px;
+    height: 320px;
+    filter: blur(55px);
   }
 
-  /* ================= SKILLS ================= */
+  /* SKILLS */
   .skills-layout {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 36px;
   }
 
   .skills-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
   }
 
   .skill-item {
+    padding: 14px 10px;
     font-size: 0.85rem;
-    padding: 12px;
     text-align: center;
   }
 
   .skill-details {
-    padding: 24px;
+    padding: 28px;
   }
 
   .skill-detail-layout {
     flex-direction: column;
-    align-items: center;
+    gap: 18px;
     text-align: center;
   }
 
@@ -834,38 +850,71 @@ img {
   }
 
   .skill-details h3 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+    margin-bottom: 6px;
   }
 
-  /* ================= CORE SKILLS ================= */
+  .skill-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* CORE SKILLS */
   .core-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .core-box {
-    padding: 24px;
-  }
-
-  /* ================= EDUCATION ================= */
-  .education-card {
-    padding: 24px;
-  }
-
-  /* ================= CONTACT ================= */
-  .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .contact-form input,
-  .contact-form textarea {
+  .core-box {
+    padding: 28px;
+  }
+
+  .core-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .core-box p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  /* EDUCATION */
+  .education-card {
+    padding: 28px;
+    margin-bottom: 26px;
+  }
+
+  .edu-meta {
+    margin-top: 6px;
     font-size: 0.9rem;
   }
 
-  /* ================= FOOTER ================= */
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+
+  /* FOOTER  */
   footer {
-    padding: 40px 20px;
+    padding: 50px 22px;
     text-align: center;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
