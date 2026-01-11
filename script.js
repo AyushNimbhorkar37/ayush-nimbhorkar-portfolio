@@ -79,7 +79,7 @@ const skillData = {
     usage: "Database design and CRUD operations",
     tools: "Mongoose, Aggregation",
     projects: "FindNest, PizzaDelight",
-    image: "assets/skills/mongodb.png"
+    image: "assets/skills/mongoDB.png"
   },
 
   mysql: {
