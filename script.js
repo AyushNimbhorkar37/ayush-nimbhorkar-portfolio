@@ -1,3 +1,4 @@
+// TYPEWRITER EFFECT
 const roles = [
   "Full Stack Developer",
   "MERN Stack Developer",
@@ -136,8 +137,7 @@ const skillData = {
   }
 };
 
-
-
+// SKILL BUTTONS
 const skillButtons = document.querySelectorAll(".skill-item");
 
 const titleEl = document.getElementById("skill-title");
@@ -241,7 +241,6 @@ form.addEventListener("submit", e => {
     return;
   }
 
-  // Simulated success (can wire to backend later)
   statusEl.textContent = "Message sent successfully!";
   statusEl.style.color = "#34d399";
   form.reset();
@@ -253,6 +252,7 @@ window.addEventListener("load", () => {
 });
 
 
+// Profile animation
 const heroVisual = document.querySelector(".hero-visual");
 const profilePic = document.querySelector(".profile-pic");
 
